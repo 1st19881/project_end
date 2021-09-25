@@ -1,0 +1,18 @@
+#b{
+    background-color: whitesmoke;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Mitr', sans-serif;
+}
+.card:hover{
+    box-shadow: 0.5px 0.5px 0.5px blue;    
+    transform: scale(1.1);
+
+}
+.btnsub{
+    background-color: red;
+    border-radius: 12px;
+}
+.boxsearch {
+   border: solid green 50rem;
+  
+}

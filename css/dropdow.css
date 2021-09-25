@@ -1,0 +1,22 @@
+.dropdown a {
+    display: inline-block;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+    overflow: hidden;
+}
+.dropdown .dropdown-menu a:after {
+    content: "";
+    position: absolute;
+    background-color: #ffc107;
+    height: 2px;
+    width: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
+    transition: .35s ease;
+}
+
+.dropdown .dropdown-menu a:hover:after {
+    width: 100%;
+}
