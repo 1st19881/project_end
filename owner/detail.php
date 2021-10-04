@@ -58,7 +58,7 @@ $row_comment = mysqli_fetch_array($result_c1);
         <div class="box1 p-5">
          <h3><b><i class="fas fa-building"></i> <?php echo $row["p_name"];?></b></h3>
            <b> <p class="text-dark"><i class="fas fa-th-large"></i> ประเภท <?php echo $row["type_name"];?></p></b>
-           <b> <p class="text-dark"><i class="fas fa-dollar-sign"></i> ราคา<?php echo $row["price"];?> บาท</p></b>
+           <b> <p class="text-dark"><i class="fas fa-dollar-sign"></i> ราคา <?php echo  number_format($row["price"]);?> บาท</p></b>
             <hr>
             <div class="d-flex">
                 <h6 id="count1"><i class="fas fa-user-tag"></i> เพิ่มโดย <?php echo $row['m_name']; ?></h6>

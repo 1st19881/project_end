@@ -58,9 +58,6 @@ $result2 = mysqli_query($con, $sql2) or die ("Error in query: $sql2 " . mysqli_e
             <div class="card-body ">
             <a data-fancybox="gallery" href="backend/pro_img/<?php echo $row['proimg'];?>">
                 <img class=" d-block w-100 mw-100" src="backend/pro_img/<?php echo $row['proimg'];?>" width="100%"  height="auto" ></a>
-                <div class="card-footer">
-                    <h4 class="m-3">LIKE</h4>
-                </div>
             </div>
         </div>
             

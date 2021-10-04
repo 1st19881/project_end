@@ -59,7 +59,7 @@ $i=1;
                 <td><?php echo $row_c['c_detail']; ?></td>
                 <td><?php echo $row_c['report']; ?></td>
                 <td>
-                <?php 
+                    <?php 
                 $comment = $row_c['c_status']; 
                 if($comment=="1"){
                     echo"<a class=' btn btn-sm btn-flat btn-danger' href='#'><i class='fas fa-times'></i> รอตรวจสอบ</a>"; 
@@ -69,13 +69,18 @@ $i=1;
                 ?>
                 </td>
                 <td>
-                <div class="d-flex">
-                <a class="btn btn-success btn-sm " href="notify_db.php?id=<?php echo $row_c['id']; ?>" onclick="return confirm('ต้องตรวจสอบหรือไม่?')">ตรวจสอบ</a>
-                </div>
+                    <div class="d-flex">
+                        <?php 
+                 $st= $row_c['c_status'];
+                if($st=="1"){ ?>
+                        <a class="btn btn-success btn-sm " href="notify_db.php?id=<?php echo $row_c['id']; ?>"
+                            onclick="return confirm('ต้องตรวจสอบหรือไม่?')">ตรวจสอบ</a>
+                        <?php  }?>
+                    </div>
                 </td>
             </tr>
 
-            <?php include('modal_comment.php'); ?>    
+            <?php include('modal_comment.php'); ?>
 
 
             <?php }  ?>
@@ -91,49 +96,19 @@ $i=1;
 </div>
 
 
-
-<script>
-$(function() {
-    $('#example1').DataTable({
-        // "paging": true,
-        // "lengthChange": true,
-        // "searching": true,
-        // "ordering": true,
-        // "info": true,
-        // "autoWidth": true,
-        "oLanguage": {
-            "sLengthMenu": "แสดง _MENU_ เร็คคอร์ด ต่อหน้า",
-            "sZeroRecords": "ไม่เจอข้อมูลที่ค้นหา",
-            "sInfo": "แสดง _START_ ถึง _END_ ของ _TOTAL_ เร็คคอร์ด",
-            "sInfoEmpty": "แสดง 0 ถึง 0 ของ 0 เร็คคอร์ด",
-            "sInfoFiltered": "(จากเร็คคอร์ดทั้งหมด _MAX_ เร็คคอร์ด)",
-            "sSearch": "ค้นหา :",
-            "oPaginate": {
-                "sFirst": "เิริ่มต้น",
-                "sPrevious": "ก่อนหน้า",
-                "sNext": "ถัดไป",
-                "sLast": "สุดท้าย"
-            }
-
-        }
-
-    });
-});
-</script>
-
 <script>
 var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 copyTextareaBtn.addEventListener('click', function(event) {
-var copyTextarea = document.querySelector('.js-copytextarea');
-copyTextarea.focus();
-copyTextarea.select();
-  try {
-    var successful = document.execCommand('copy');
-    var msg = successful ? 'successful' : 'unsuccessful';
-    console.log('Copying text command was ' + msg);
-  } catch (err) {
-    console.log('Oops, unable to copy');
-  }
+    var copyTextarea = document.querySelector('.js-copytextarea');
+    copyTextarea.focus();
+    copyTextarea.select();
+    try {
+        var successful = document.execCommand('copy');
+        var msg = successful ? 'successful' : 'unsuccessful';
+        console.log('Copying text command was ' + msg);
+    } catch (err) {
+        console.log('Oops, unable to copy');
+    }
 });
 </script>
 

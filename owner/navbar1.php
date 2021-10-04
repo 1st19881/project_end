@@ -5,7 +5,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link <?php if ($menu == "index"){echo "active";} ?>"  href="index.php"><i class="fas fa-search-location"></i></i>  ระบบค้นหาแนะนำหอพักบริเวณ KUCSC ( ระบบหลังบ้าน )</a>
+        <a class="nav-link <?php if ($menu == "index"){echo "active";} ?>"  href="owner.php"><i class="fas fa-search-location"></i></i>  ระบบค้นหาแนะนำหอพักบริเวณ KUCSC</a>
       </li>
       
     </ul>

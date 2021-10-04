@@ -19,16 +19,29 @@ $sql = "UPDATE tbl_comment_report SET
 	mysqli_close($con);
 	
 
+	echo '
+	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+	';		
 	if($result){
-        echo "<script type='text/javascript'>";
-        echo "alert('สำเร็จ');";
-        echo "window.location = 'notify.php'; ";
-        echo "</script>";
-        }
-        else{
-        echo "<script type='text/javascript'>";
-        echo "alert('Error back to delete again');";
-        echo "window.location = 'notify.php'; ";
-        echo "</script>";
-      }
+		echo '
+		<script>
+		   setTimeout(function() {
+			swal({
+				title: "สำเร็จ",
+				type: "success"
+			}, function() {
+				window.location = "notify.php";
+			});
+		}, 100);
+	</script>
+	';
+}
+else{
+echo "<script type='text/javascript'>";
+echo "alert('ไม่สำเร็จ');";
+echo "window.location = 'notify.php'; ";
+echo "</script>";
+}
 ?>

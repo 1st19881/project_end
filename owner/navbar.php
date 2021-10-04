@@ -58,17 +58,10 @@ $row = mysqli_fetch_array($resault);
       </li> 
       
       
-      <li class="nav-item dropdown ">
-        <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-edit"></i>  จัดการข้อมูล
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="dormitory.php"><i class="fas fa-edit"></i> จัดการหอพัก</a>
-          <a class="dropdown-item" href="promotion.php"><i class="fas fa-edit"></i> จัดการโปรโมชั่น</a>
-          <a class="dropdown-item" href="comment.php"><i class="fas fa-edit"></i> จัดการความคิดเห็น</a>
-        </div>
+    
+      <li class="nav-item active">
+        <a class="nav-link text-warning  " href="dormitory.php"> จัดการข้อมูล<span class="sr-only"></span></a>
       </li>
-
 
 
 

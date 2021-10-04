@@ -248,27 +248,6 @@ $row_comment = mysqli_fetch_array($result_c1);
                                     }
                                     ?>
                         </div>
-                        <div>
-                        <p>
-                        <button class="btn btn-danger btn-sm btn-flat" type="button" data-toggle="collapse" data-target="#collap<?php echo $row_c['c_id'] ; ?>" aria-expanded="false" aria-controls="collapseExample">
-                           รายงาน
-                        </button>
-                        </p>
-                        <div class="collapse" id="collap<?php echo $row_c['c_id'] ; ?>">
-                        <div class="card card-body">
-                        <form action="comment_success.php" method="post">
-                        <textarea name="report" class="form-control" id="" cols="30" rows="10"></textarea>
-                        <br>
-                        <div class="d-flex justify-content-end">
-                        <input type="hidden" name="ref_p_id" value="<?php echo 
-                        $row['p_id'];?>">
-                        <input type="hidden" name="c_id" value="<?php echo $row_c['c_id'] ; ?>">
-                        <button class="btn btn-sm btn-danger " type="submit">บันทึก</button>                
-                        </div>
-                        </form>
-                        </div>
-                        </div>
-                        </div>
                         <br>
                         <hr>
                         <?php  } ?>

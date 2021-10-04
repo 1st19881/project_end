@@ -13,7 +13,9 @@ if($level_m !='เจ้าของหอพัก'){
     Header("Location: ../form_login_user.php");    //ไม่พบผู้ใช้กระโดดกลับไปหน้า login user form 
     
 }?>
-<?php include('h.php');?>
+<?php include('h.php');
+$menu = "owner";
+?>
 <title>หน้าแรก</title>
 
 <style>

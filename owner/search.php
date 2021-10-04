@@ -44,11 +44,11 @@ $count = mysqli_num_rows($result_s);
         <form action="" method="GET">
             <div class="form-row">
                 <div class="col-sm-4 mb-2">
-                    <input type="number" id="input1" name="min" class=" form-control " placeholder="ราคาต่ำสุด"
+                    <input type="number" id="input1" name="min"  min="0" class=" form-control " placeholder="ราคาต่ำสุด"
                         required>
                 </div>
                 <div class="col-sm-4 mb-2">
-                    <input type="number" id="input1" name="max" class=" form-control " placeholder="ราคาสูงสุด"
+                    <input type="number" id="input1" name="max"  min="0" class=" form-control " placeholder="ราคาสูงสุด"
                         required>
                 </div>
                 <div class="col-sm-4">

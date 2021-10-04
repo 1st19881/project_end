@@ -43,23 +43,6 @@ $i=1;
         <div class="card-title"> <i class="fas fa-edit"></i> จัดการโปรโมชั่น</div>
     </div>
     <div class="card-body">
-
-        <div class="row">
-            <div class="col-md-12 mb-4">
-                <a href="promotion.php" style="text-decoration:none">
-                    <div class="small-box bg-dark" style="border-radius:0;">
-                        <div class="inner">
-                            <h4>จำนวนโปรโมชั่น :</h4>
-                            <h1 class="text-center"><?php echo $row_pro['all_pro'] ?> </h1>
-                        </div>
-                        <div class="icon">
-                            <i class="fas fa-calendar-alt text-white"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-        </div>
       <div class="col-md-12">
       <a href="promotion.php?act=add" class="btn btn-primary btn-sm btn-flat col-2"><i class="fas fa-plus-square"></i>
             เพิ่ม+ </a>
@@ -70,7 +53,7 @@ $i=1;
                     <th scope="col" class="text-nowrap" width="20%">ชื่อโปรโมชั่น</th>
                     <th scope="col" class="text-nowrap" width="15%">เพิ่มโดย</th>
                     <th scope="col" class="text-nowrap" width="15%">จำนวนเข้าชม</th>
-                    <th scope="col" class="text-nowrap" width="15%">ภาพ</th>
+                    <th scope="col" class="text-nowrap" width="10%">ภาพ</th>
                     <th scope="col" class="text-nowrap" width="20%">จัดการ</th>
                 </tr>
             </thead>
@@ -80,7 +63,7 @@ $i=1;
                 <td><a href="detail_pro.php?pro_id=<?php echo $row_po['pro_id'];  ?>"><?php echo $row_po['pro_name']; ?></a></td>
                 <td><?php echo $row_po['m_name']; ?></td>
                 <td><?php echo $row_po['pro_view']; ?></td>
-                <td class="text-nowrap"><img src="../backend/pro_img/<?php echo $row_po['proimg'];?>" width="90%"
+                <td class="text-nowrap"><img src="../backend/pro_img/<?php echo $row_po['proimg'];?>" width="100%"
                         alt="..."></td>
                 <td class="d-flex justify-content-center">
                     <button class="btn  btn-flat btn-primary" data-toggle="modal"
@@ -111,34 +94,6 @@ $i=1;
 
 
 
-<script>
-$(function() {
-    $('#example1').DataTable({
-        // "paging": true,
-        // "lengthChange": true,
-        // "searching": true,
-        // "ordering": true,
-        // "info": true,
-        // "autoWidth": true,
-        "oLanguage": {
-            "sLengthMenu": "แสดง _MENU_ เร็คคอร์ด ต่อหน้า",
-            "sZeroRecords": "ไม่เจอข้อมูลที่ค้นหา",
-            "sInfo": "แสดง _START_ ถึง _END_ ของ _TOTAL_ เร็คคอร์ด",
-            "sInfoEmpty": "แสดง 0 ถึง 0 ของ 0 เร็คคอร์ด",
-            "sInfoFiltered": "(จากเร็คคอร์ดทั้งหมด _MAX_ เร็คคอร์ด)",
-            "sSearch": "ค้นหา :",
-            "oPaginate": {
-                "sFirst": "เิริ่มต้น",
-                "sPrevious": "ก่อนหน้า",
-                "sNext": "ถัดไป",
-                "sLast": "สุดท้าย"
-            }
-
-        }
-
-    });
-});
-</script>
 
 </body>
 

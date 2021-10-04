@@ -1,48 +1,16 @@
 <html>
-<link rel="stylesheet" href="../backend/assets/dist/css/adminlte.min.css">
-
+<title>จัดการหอพัก</title>
 <head>
-    <?php 
-session_start();
-include('h.php');
+<?php session_start();
+include('header.php');
 $menu = "comment";
-?>
-
-    <head>
-
-    <body>
-        <?php include('navbar.php');?>
-        <div class="container-fluid">
-            <p></p>
-            <br><br><br>
-            <div class="row">
-                <div class="col-md-2 "><br>
-                    <!-- Left side column. contains the logo and sidebar -->
-                    <?php include('menu.php');?>
-                    <!-- Content Wrapper. Contains page content -->
-                </div>
-                <div class="col-md-10 ">
-                    <br>
-                    <?php 
-                  error_reporting( error_reporting() & ~E_NOTICE );
-
-                      include('comment_list.php');
-
-                  ?>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                </div>
-            </div>
+?> 
+<head>
+  <body>
+  <div class="col-md-12">
+            <?php 
+            error_reporting( error_reporting() & ~E_NOTICE );
+            include('comment_list.php');
+            ?>
         </div>
-        <footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; ระบบแนะนำค้นหาหอพัก 2021 devCS</p>
-    </div>
-    <!-- /.container -->
-</footer>
-    </body>
-
-</html>
+  <?php include('footer.php'); ?> 
